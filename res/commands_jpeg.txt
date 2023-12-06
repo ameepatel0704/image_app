@@ -1,0 +1,35 @@
+load res/stop.jpeg stop
+horizontal-flip stop stop-horizontal
+save res/test_jpeg/stop_horizontal.jpeg stop-horizontal
+vertical-flip stop stop-vertical
+save res/test_jpeg/stop_vertical.jpeg stop-vertical
+horizontal-flip stop-vertical stop-vertical-horizontal
+save res/test_jpeg/stop_vertical_horizontal.jpeg stop-vertical-horizontal
+vertical-flip stop-horizontal stop-horizontal-vertical
+save res/test_jpeg/stop_horizontal_vertical.jpeg stop-horizontal-vertical
+brighten 50 stop stop-brighten
+save res/test_jpeg/stop_brighten_50.jpeg stop-brighten
+brighten -50 stop stop-darken
+save res/test_jpeg/stop_darken_50.jpeg stop-darken
+greyscale value-component stop stop-value-greyscale
+save res/test_jpeg/stop_value_greyscale.jpeg stop-value-greyscale
+greyscale luma-component stop stop-luma-greyscale
+save res/test_jpeg/stop_luma_greyscale.jpeg stop-luma-greyscale
+greyscale intensity-component stop stop-intensity-greyscale
+save res/test_jpeg/stop_intensity_greyscale.jpeg stop-intensity-greyscale
+greyscale red-component stop stop-red-greyscale
+save res/test_jpeg/stop_red_greyscale.jpeg stop-red-greyscale
+rgb-split stop stop-red-grey stop-green-grey stop-blue-grey
+save res/test_jpeg/stop_red_grayscale.jpeg stop-red-grey
+save res/test_jpeg/stop_green_grayscale.jpeg stop-green-grey
+save res/test_jpeg/stop_blue_grayscale.jpeg stop-blue-grey
+rgb-combine stop-red-grey stop-green-grey stop-blue-grey rgb-combine-image
+save res/test_jpeg/stop.jpeg rgb-combine-image
+filter sharpen stop stop_sharpen
+filter blur stop stop_blur
+dither stop stop_dithered
+color-transform sepia stop stop_sepia_tone
+save res/test_jpeg/stop_sharpen.jpeg stop_sharpen
+save res/test_jpeg/stop_blur.jpeg stop_blur
+save res/test_jpeg/stop_dithered.jpeg stop_dithered
+save res/test_jpeg/stop_sepia_tone.jpeg stop_sepia_tone
